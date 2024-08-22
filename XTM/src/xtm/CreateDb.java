@@ -12,7 +12,7 @@ public class CreateDb {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306", "root", "1234");
+					"jdbc:mysql://localhost:3306", "root", "1123");
 			stmt = con.createStatement();
 			stmt.executeUpdate("CREATE DATABASE IF NOT EXISTS xtm");
 			stmt.executeUpdate("USE xtm");
@@ -63,7 +63,7 @@ public class CreateDb {
 					+ "facility VARCHAR(255), "
 					+ "PRIMARY KEY ( formno ))";
 			stmt.executeUpdate(sql5);
-			stmt.executeUpdate("INSERT INTO login VALUES('1234', '1234123412341234', '1234')");
+			// stmt.executeUpdate("INSERT INTO login VALUES('1234', '1234123412341234', '1234')");
 			con.close();
 		} catch (Exception e) {
 			e.printStackTrace();
